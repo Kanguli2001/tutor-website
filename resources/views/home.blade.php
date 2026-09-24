@@ -38,6 +38,16 @@
 
             <img style="height: 40px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6;" 
                  src="{{ asset('images/references/company-logo-6.png') }}" alt="Company logo 6">
+
+            <img style="height: 40px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6;" 
+                 src="{{ asset('images/references/company-logo-7.png') }}" alt="Company logo 7">
+        
+            <img style="height: 40px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6;" 
+                 src="{{ asset('images/references/company-logo-8.png') }}" alt="Company logo 8">
+
+            <img style="height: 40px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6;" 
+                 src="{{ asset('images/references/company-logo-9.png') }}" alt="Company logo 9">
+
         </div>
     </section>
 
