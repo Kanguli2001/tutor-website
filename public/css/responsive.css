@@ -1,0 +1,634 @@
+@media (max-width: 720px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .shell {
+        width: min(100% - 32px, 540px) !important;
+    }
+    .site-header {
+        height: auto !important;
+    }
+    .header-inner {
+        min-height: 60px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    .brand-home {
+        white-space: nowrap;
+    }
+    .site-nav {
+        display: flex !important;
+        order: 3;
+        width: 100%;
+        margin: 6px 0 0;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+    .site-nav::-webkit-scrollbar,
+    .dash-links::-webkit-scrollbar {
+        display: none;
+    }
+    .site-nav a,
+    .dash-links a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    .header-button {
+        margin-left: auto;
+    }
+    .home-hero {
+        padding-top: 42px !important;
+    }
+    .home-hero h1 {
+        font-size: 29px;
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+    .home-hero > p {
+        font-size: 12px;
+    }
+    .home-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 34px;
+    }
+    .hero-photo {
+        width: 100%;
+        height: 360px;
+    }
+    .benefit-grid,
+    .catalog-grid,
+    .value-grid,
+    .continue-cards,
+    .recommend-grid,
+    .student-content,
+    .course-hero,
+    .curriculum,
+    .tutorial-listing,
+    .footer-grid,
+    .about-hero,
+    .auth-page,
+    .tutorial-feature,
+    .welcome-banner {
+        grid-template-columns: 1fr !important;
+    }
+    .footer-grid {
+        gap: 25px;
+    }
+    .footer-bottom {
+        display: block;
+        line-height: 2;
+    }
+    .catalog-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+    .catalog-filters label {
+        min-width: 215px;
+    }
+    .tutorial-feature {
+        height: auto;
+    }
+    .tutorial-feature-image {
+        height: 260px;
+    }
+    .tutorial-feature-copy {
+        padding: 28px 22px;
+    }
+    .tutorial-feature-copy h1 {
+        font-size: 28px;
+        line-height: 1.05;
+    }
+    .topic-sidebar,
+    .auth-art,
+    .newsletter {
+        display: none;
+    }
+    .tutorial-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .dashboard-layout {
+        grid-template-columns: 1fr !important;
+    }
+    .dash-sidebar {
+        display: block;
+        padding: 16px 20px;
+        position: static;
+    }
+    .dash-sidebar .brand {
+        margin-bottom: 14px;
+    }
+    .dash-links {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+    .dash-main {
+        padding: 16px;
+    }
+    .dash-topbar {
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .dash-search {
+        min-width: 0;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .dash-user span {
+        display: none;
+    }
+    .welcome-banner {
+        height: auto;
+        padding: 24px;
+    }
+    .welcome-banner > img {
+        display: none;
+    }
+    .continue-card p {
+        white-space: normal;
+    }
+    .auth-page {
+        min-height: 700px;
+    }
+    .auth-panel {
+        max-width: calc(100% - 32px);
+        width: 370px;
+    }
+    .dashboard-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+    .dashboard-head h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+    .wide-panel {
+        overflow-x: auto;
+    }
+    .admin-table {
+        min-width: 580px;
+    }
+    .metric-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .metric strong {
+        font-size: 24px;
+    }
+    .about-hero h1 {
+        font-size: 34px;
+        line-height: 1.05;
+    }
+    .about-hero img {
+        width: 100%;
+        height: auto;
+    }
+    .footer-email {
+        max-width: 100%;
+    }
+    .header-logout {
+        margin: 0;
+    }
+    .profile-photo-wrap {
+        display: flex;
+        justify-content: center;
+    }
+    .profile-photo {
+        width: 104px;
+        height: 104px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid var(--pale);
+    }
+    .profile-initial {
+        display: grid;
+        place-items: center;
+        background: var(--purple);
+        color: #fff;
+        font-size: 42px;
+        font-weight: 800;
+    }
+    .product-shell {
+        grid-template-columns: 1fr !important;
+    }
+    .product-sidebar {
+        display: none;
+    }
+    .product-main {
+        padding: 24px 16px;
+    }
+    .product-top {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .student-continue {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.content-page {
+    padding: 72px 0;
+    min-height: 60vh;
+}
+.page-heading {
+    margin-bottom: 32px;
+    max-width: 680px;
+}
+.page-heading h1,
+.prose-page h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 12px 0;
+}
+.page-heading p,
+.prose-page p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+.content-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+}
+.content-card h2,
+.content-card h3 {
+    margin: 0;
+}
+.content-card p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+.content-card .primary-button,
+.content-card .secondary-button {
+    align-self: flex-start;
+}
+.learning-grid,
+.pricing-grid,
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+.checkout-layout,
+.lesson-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    gap: 24px;
+    align-items: start;
+}
+.checkout-card strong {
+    font-size: 36px;
+}
+.feature-list {
+    color: var(--muted);
+    line-height: 2;
+    padding-left: 20px;
+}
+.progress-track {
+    height: 8px;
+    border-radius: 8px;
+    background: var(--pale);
+    overflow: hidden;
+}
+.progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--purple);
+}
+.lesson-placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 260px;
+    border-radius: 8px;
+    background: #24263d;
+    color: #fff;
+}
+.module-list p,
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+}
+.module-list small,
+.table-row small {
+    color: var(--muted);
+}
+.review-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+.review-form select,
+.review-form textarea {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 10px;
+    font: inherit;
+}
+.stack-form {
+    display: grid;
+    gap: 15px;
+    margin: 24px 0;
+}
+.stack-form label {
+    display: grid;
+    gap: 7px;
+    color: var(--ink);
+    font-weight: 600;
+}
+.form-alert {
+    margin: 16px 0;
+    padding: 12px 14px;
+    border-radius: 6px;
+    background: #f2f1ff;
+    color: var(--purple);
+}
+.check-row {
+    display: flex !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px !important;
+    font-weight: 400 !important;
+}
+.text-link {
+    color: var(--purple);
+    font-weight: 600;
+}
+.faq-list {
+    display: grid;
+    gap: 12px;
+    max-width: 760px;
+}
+.faq-list details {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+}
+.faq-list summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+.faq-list details p {
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 620px;
+}
+.prose-page {
+    max-width: 760px;
+}
+.prose-page h2 {
+    margin-top: 32px;
+}
+.featured-card {
+    border-color: var(--purple);
+}
+.lesson-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--line);
+    padding: 12px 0;
+}
+.lesson-row small {
+    color: var(--muted);
+}
+.lesson-content {
+    padding: 14px;
+    background: var(--pale);
+    border-radius: 6px;
+}
+.lesson-content h4 {
+    margin: 0 0 8px;
+}
+.course-reviews {
+    margin-top: 24px;
+}
+.admin-sidebar {
+    position: fixed;
+    z-index: 20;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 232px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 28px 18px;
+    background: #1d1e36;
+    color: #fff;
+}
+.admin-sidebar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.admin-sidebar-brand .brand-icon {
+    color: #a29bff;
+}
+.admin-sidebar-nav {
+    display: grid;
+    gap: 6px;
+}
+.admin-sidebar-nav a,
+.admin-sidebar-logout button {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 6px;
+    padding: 11px 12px;
+    background: transparent;
+    color: #c8c9d8;
+    text-align: left;
+    font:
+        600 12px Inter,
+        sans-serif;
+    cursor: pointer;
+}
+.admin-sidebar-nav a:hover,
+.admin-sidebar-nav a.is-active,
+.admin-sidebar-logout button:hover {
+    background: #343653;
+    color: #fff;
+}
+.admin-sidebar-logout {
+    margin-top: auto;
+}
+.has-admin-sidebar main,
+.has-admin-sidebar .site-footer,
+.has-tutor-sidebar main,
+.has-tutor-sidebar .site-footer,
+.has-student-sidebar main,
+.has-student-sidebar .site-footer {
+    margin-left: 232px;
+}
+.analytics-card {
+    margin-top: 24px;
+}
+.analytics-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+.analytics-toolbar h2 {
+    margin: 0 0 6px;
+}
+.analytics-toolbar p {
+    margin: 0;
+    color: var(--muted);
+}
+.chart-toggle {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 6px;
+    background: var(--pale);
+}
+.chart-toggle-button {
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 14px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font: inherit;
+}
+.chart-toggle-button.is-active {
+    background: #fff;
+    color: var(--purple);
+    box-shadow: 0 1px 3px #1d1e3618;
+}
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 24px 0 8px;
+    color: var(--muted);
+    font-size: 11px;
+}
+.chart-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.chart-legend i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+.legend-users {
+    background: #4d42e9;
+}
+.legend-enrollments {
+    background: #20a779;
+}
+.legend-revenue {
+    background: #e0912f;
+}
+.chart-stage {
+    width: 100%;
+    overflow-x: auto;
+}
+.analytics-chart {
+    display: block;
+    min-width: 620px;
+    width: 100%;
+    height: auto;
+}
+.chart-grid-line {
+    stroke: #eeeef4;
+    stroke-width: 1;
+}
+.chart-label {
+    fill: #697085;
+    font-size: 12px;
+}
+.chart-line {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.chart-bar {
+    opacity: 0.9;
+}
+@media (max-width: 720px) {
+    .analytics-toolbar {
+        flex-direction: column;
+    }
+    .chart-toggle {
+        align-self: flex-start;
+    }
+}
+@media (max-width: 720px) {
+    .admin-sidebar {
+        position: static;
+        width: auto;
+        gap: 16px;
+        padding: 16px;
+    }
+    .admin-sidebar-nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        scrollbar-width: none;
+    }
+    .admin-sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+    .admin-sidebar-nav a {
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+    }
+    .admin-sidebar-logout {
+        margin-top: 0;
+    }
+    .admin-sidebar-logout button {
+        width: auto;
+        background: #343653;
+    }
+    .has-admin-sidebar main,
+    .has-admin-sidebar .site-footer,
+    .has-tutor-sidebar main,
+    .has-tutor-sidebar .site-footer,
+    .has-student-sidebar main,
+    .has-student-sidebar .site-footer {
+        margin-left: 0;
+    }
+}
+@media (max-width: 720px) {
+    .content-page {
+        padding: 42px 0;
+    }
+    .page-heading h1,
+    .prose-page h1 {
+        font-size: 32px;
+    }
+    .learning-grid,
+    .pricing-grid,
+    .management-grid,
+    .checkout-layout,
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+}
