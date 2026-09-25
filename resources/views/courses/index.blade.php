@@ -36,7 +36,7 @@
                     <x-course-card :course="$course" />
                 @endforeach
             </div>
-            {{ $courses->links() }}
+            {{ $courses->links('vendor.pagination.custom') }}
             <button class="load-button">Load More Courses</button>
         </div>
     </section>
