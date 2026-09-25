@@ -53,16 +53,36 @@
                     type="submit">Log out</button></form>
         </aside>
     @endif
-    @if (Auth::check() && Auth::user()->role === 'student')
-        <aside class="admin-sidebar role-sidebar"><a class="admin-sidebar-brand" href="{{ route('dashboard') }}"><span
-                    class="brand-icon">✦</span><span>Mawey Learning</span></a>
-            <nav class="admin-sidebar-nav"><a href="{{ route('dashboard') }}">My learning</a><a
-                    href="{{ route('courses.index') }}">Browse courses</a><a
-                    href="{{ route('tutorials.index') }}">Tutorials</a><a
-                    href="{{ route('notifications') }}">Notifications</a><a href="{{ route('profile') }}">My
-                    profile</a></nav>
-            <form method="POST" action="{{ route('logout') }}" class="admin-sidebar-logout">@csrf<button
-                    type="submit">Log out</button></form>
+        @if (Auth::check() && Auth::user()->role === 'student')
+        <aside class="admin-sidebar role-sidebar">
+            <a class="admin-sidebar-brand" href="{{ route('dashboard') }}">
+                <span class="brand-icon">✦</span><span>Mawey Learning</span>
+            </a>
+            <nav class="admin-sidebar-nav">
+                <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'is-active' : '' }}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    My learning
+                </a>
+                <a href="{{ route('courses.index') }}" class="{{ request()->routeIs('courses.*') ? 'is-active' : '' }}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Browse courses
+                </a>
+                <a href="{{ route('tutorials.index') }}" class="{{ request()->routeIs('tutorials.*') ? 'is-active' : '' }}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Tutorials
+                </a>
+                <a href="{{ route('notifications') }}" class="{{ request()->routeIs('notifications') ? 'is-active' : '' }}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    Notifications
+                </a>
+                <a href="{{ route('profile') }}" class="{{ request()->routeIs('profile') ? 'is-active' : '' }}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    My profile
+                </a>
+            </nav>
+            <form method="POST" action="{{ route('logout') }}" class="admin-sidebar-logout">@csrf
+                <button type="submit">Log out</button>
+            </form>
         </aside>
     @endif
     <main>{{ $slot }}</main>
