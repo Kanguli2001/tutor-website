@@ -3660,3 +3660,496 @@ a {
         padding: 14px;
     }
 }
+
+/* =========================================
+   PRICING PAGE SAFE IMPROVEMENTS (APPENDED)
+   ========================================= */
+
+/* --- 1. Page Heading (Centered) --- */
+.pricing-heading {
+    text-align: center;
+    margin: 0 auto 48px auto;
+    max-width: 620px;
+}
+
+.pricing-heading h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+    margin: 12px 0 14px;
+}
+
+.pricing-heading p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* --- 2. Pricing Cards Grid --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 60px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(77, 66, 233, 0.15);
+    border-color: #c7d2fe;
+}
+
+/* --- 3. Featured Card (Higher Contrast) --- */
+.pricing-card-featured {
+    border: 2px solid var(--purple);
+    background: linear-gradient(180deg, #fafaff 0%, #fff 100%);
+    box-shadow: 0 16px 40px -12px rgba(77, 66, 233, 0.25);
+}
+
+.pricing-card-featured:hover {
+    border-color: var(--purple);
+    box-shadow: 0 24px 50px -12px rgba(77, 66, 233, 0.35);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--purple);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* --- 4. Card Header --- */
+.pricing-card-header {
+    margin-bottom: 24px;
+}
+
+.pricing-card-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+
+.pricing-description {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* --- 5. Price Display --- */
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+}
+
+.pricing-currency {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    align-self: flex-start;
+    margin-top: 6px;
+}
+
+.pricing-amount {
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.pricing-period {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+/* --- 6. Feature List --- */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.pricing-features li svg {
+    color: #20a779;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pricing-card-featured .pricing-features li svg {
+    color: var(--purple);
+}
+
+/* --- 7. CTA Button --- */
+.pricing-cta {
+    width: 100%;
+    height: 48px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.pricing-note {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    margin: 12px 0 0 0;
+    font-style: italic;
+}
+
+/* --- 8. FAQ Section --- */
+.pricing-faq {
+    padding-top: 48px;
+    border-top: 1px solid var(--line);
+}
+
+.pricing-faq h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    margin: 0 0 36px 0;
+    letter-spacing: -0.8px;
+}
+
+.pricing-faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pricing-faq-item h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 8px 0;
+}
+
+.pricing-faq-item p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.pricing-faq-item a {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s ease;
+}
+
+.pricing-faq-item a:hover {
+    text-decoration-color: var(--purple);
+}
+
+/* --- 9. Responsive --- */
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .pricing-heading h1 {
+        font-size: 32px;
+    }
+    
+    .pricing-card {
+        padding: 28px 24px;
+    }
+    
+    .pricing-amount {
+        font-size: 44px;
+    }
+    
+    .pricing-faq h2 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE FOOTER & HEADER POLISH (APPENDED)
+   ========================================= */
+
+@media (max-width: 720px) {
+
+    /* --- 1. Force footer grid to single column --- */
+    .site-footer .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        padding-bottom: 32px !important;
+        text-align: center;
+    }
+
+    /* --- 2. Override the old flex rule on footer children --- */
+    .site-footer .footer-grid > div,
+    .site-footer .footer-grid > div:not(:first-child) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        font-size: 12px !important;
+    }
+
+    /* --- 3. Brand column: center the logo + description + socials --- */
+    .footer-brand-col .brand {
+        justify-content: center;
+    }
+
+    .footer-brand-col p {
+        max-width: 320px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    /* --- 4. Link columns: center the heading and links --- */
+    .footer-link-col {
+        align-items: center;
+    }
+
+    .footer-link-col a {
+        transform: none !important; /* Disable hover-slide on mobile */
+    }
+
+    /* --- 5. Newsletter: full-width form, centered --- */
+    .footer-newsletter-col {
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-newsletter-col p {
+        text-align: center;
+        max-width: 320px;
+    }
+
+    .footer-email {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    /* --- 6. Bottom bar: stack and center --- */
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 14px !important;
+        padding: 20px 0 !important;
+    }
+
+    .footer-legal-links {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+/* --- Small mobile (< 480px) fine-tuning --- */
+@media (max-width: 480px) {
+    .site-footer {
+        padding-top: 36px;
+        margin-top: 40px;
+    }
+
+    .site-footer .footer-grid {
+        gap: 28px !important;
+    }
+
+    .footer-brand-col .brand {
+        font-size: 16px;
+    }
+
+    .footer-brand-col p {
+        font-size: 12px;
+    }
+
+    .footer-link-col b,
+    .footer-newsletter-col b {
+        font-size: 11px;
+    }
+
+    .footer-email {
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   TOPIC SIDEBAR RESPONSIVE DROPDOWN (APPENDED)
+   ========================================= */
+
+/* --- Desktop: force the details open, hide chevron --- */
+@media (min-width: 721px) {
+    .topic-sidebar .topic-dropdown > .topic-dropdown-body {
+        display: block !important;
+    }
+
+    .topic-sidebar .topic-dropdown > summary {
+        pointer-events: none;
+        cursor: default;
+        list-style: none;
+        margin-bottom: 15px;
+    }
+
+    .topic-sidebar .topic-dropdown > summary svg {
+        display: none;
+    }
+
+    .topic-sidebar .topic-dropdown > summary span {
+        font-size: 10px;
+        color: var(--ink);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* --- Mobile: real collapsible dropdown --- */
+@media (max-width: 720px) {
+
+    /* Override the older rule that hid the sidebar completely */
+    .tutorial-listing .topic-sidebar {
+        display: block !important;
+        margin-bottom: 24px;
+        grid-column: 1 / -1;   /* Span full width inside the grid */
+    }
+
+    .topic-dropdown {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    .topic-dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+        user-select: none;
+        list-style: none;
+        transition: background 0.15s ease;
+    }
+
+    .topic-dropdown-toggle:hover {
+        background: #f9fafb;
+    }
+
+    .topic-dropdown-toggle::-webkit-details-marker {
+        display: none;
+    }
+
+    .topic-dropdown-toggle svg {
+        transition: transform 0.2s ease;
+        color: var(--purple);
+        flex-shrink: 0;
+    }
+
+    .topic-dropdown[open] .topic-dropdown-toggle svg {
+        transform: rotate(180deg);
+    }
+
+    .topic-dropdown-body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 12px 14px 12px;
+        border-top: 1px solid var(--line);
+    }
+
+    .topic-dropdown-body a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #4d5366;
+        transition: background 0.15s ease;
+    }
+
+    .topic-dropdown-body a:hover {
+        background: #f5f5fb;
+    }
+
+    .topic-dropdown-body a.active {
+        background: var(--purple);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .topic-dropdown-body a span {
+        font-size: 11px;
+        opacity: 0.7;
+    }
+
+    /* Keep the weekly updates card visible on mobile too */
+    .topic-sidebar .update-card {
+        margin-top: 0;
+    }
+}

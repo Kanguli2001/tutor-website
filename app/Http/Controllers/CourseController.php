@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tutorial;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
@@ -68,13 +70,40 @@ class CourseController extends Controller
         return view('courses.show', ['course' => $course, 'reviews' => $courseModel->reviews]);
     }
 
-    public function tutorials(): View
+    public function tutorials(Request $request): View|Response
     {
-        return view('tutorials.index', ['tutorials' => [
-            ['image' => 'bb0c4c4d-2.jpg', 'category' => 'UI DESIGN', 'age' => '2 days ago', 'title' => 'Building a Dark Mode Dashboard with Tailwind', 'description' => 'Learn the strategy behind semantic colors and system preference matching.', 'duration' => '15:20'],
-            ['image' => 'bb0c4c4d-3.jpg', 'category' => 'REACT', 'age' => '5 days ago', 'title' => 'Understanding React Server Components', 'description' => 'The ultimate guide to how RSCs work and when to use client vs server components.', 'duration' => '12:15'],
-            ['image' => 'bb0c4c4d-4.jpg', 'category' => 'TYPOGRAPHY', 'age' => '1 week ago', 'title' => 'Choosing the Perfect Sans-Serif Font Pair', 'description' => 'A deep dive into readability, x-heights, and weight distribution in digital design.', 'duration' => 'Read 8m'],
-            ['image' => 'bb0c4c4d-5.jpg', 'category' => 'PROTOTYPING', 'age' => '1 week ago', 'title' => 'Advanced Micro-Interactions in Figma', 'description' => 'Master smart animate and component variants to bring your designs to life.', 'duration' => '22:10'],
-        ]]);
+        // Featured tutorial
+        $featured = Tutorial::published()->where('is_featured', true)->first()
+                ?? Tutorial::published()->first();
+
+        // Paginated list (6 per page), excluding the featured one
+        $tutorials = Tutorial::published()
+            ->when($featured, fn ($q) => $q->where('id', '!=', $featured->id))
+            ->paginate(6);
+
+            // AJAX request (Load More) → return only the card partial
+        if ($request->ajax()) {
+            return response()
+                ->view('partials.tutorial-cards', compact('tutorials'))
+                ->header('X-Next-Page-Url', $tutorials->nextPageUrl() ?? '');
+        }
+
+        // Category counts for sidebar
+        // Category counts for sidebar
+        $categoryCounts = Tutorial::published()
+            ->reorder()                          // ← clears the scope's orderBy
+            ->selectRaw('category, count(*) as total')
+            ->groupBy('category')
+            ->orderByDesc('total')
+            ->get();
+
+        $totalTutorials = Tutorial::published()->count();
+
+        return view('tutorials.index', compact(
+            'featured',
+            'tutorials',
+            'categoryCounts',
+            'totalTutorials'
+        ));
     }
 }
