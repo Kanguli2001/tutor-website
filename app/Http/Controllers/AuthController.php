@@ -38,10 +38,14 @@ class AuthController extends Controller
     public function register(Request $request): RedirectResponse
     {
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:100'],
+            'first_name' => ['required', 'string', 'max:50'],
+            'last_name' => ['required', 'string', 'max:50'],
             'email' => ['required', 'email', 'max:255', 'unique:users,email'],
-            'password' => ['required', 'confirmed', 'min:8'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
+
+        $data['name'] = trim($data['first_name'].' '.$data['last_name']);
+        unset($data['first_name'], $data['last_name']);
 
         $user = User::create($data);
         Auth::login($user);

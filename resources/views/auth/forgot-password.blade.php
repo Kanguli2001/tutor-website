@@ -1,30 +1,26 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.auth')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Reset password - Mawey Tutorials</title>
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
-</head>
+@section('title', 'Reset your password')
 
-<body>
-    <main class="auth-page">
-        <section class="auth-panel"><a class="brand" href="{{ route('home') }}"><span class="brand-icon">✦</span>Mawey</a>
-            <h1>Reset your password</h1>
-            <p>Enter your email and we will send reset instructions.</p>
-            @if (session('status'))
-                <div class="form-alert">{{ session('status') }}</div>
-            @endif
-            @if ($errors->any())
-                <div class="form-alert">{{ $errors->first() }}</div>
-            @endif
-            <form method="POST" action="{{ route('password.email') }}" class="stack-form">@csrf<label>Email<input
-                        class="form-field" type="email" name="email" required></label><button
-                    class="primary-button form-submit" type="submit">Send reset link →</button></form><a
-                class="text-link" href="{{ route('login') }}">Back to login</a>
-        </section>
-    </main>
-</body>
+@section('auth-content')
+    <h1>Reset your password</h1>
+    <p class="auth-subtitle">Enter your email and we will send reset instructions.</p>
 
-</html>
+    @if (session('status'))
+        <div class="auth-alert auth-alert-success" role="status">{{ session('status') }}</div>
+    @endif
+    @if ($errors->any())
+        <div class="auth-alert" role="alert">{{ $errors->first() }}</div>
+    @endif
+
+    <form method="POST" action="{{ route('password.email') }}" class="auth-form">
+        @csrf
+        <label>Email Address
+            <input class="form-field" type="email" name="email" value="{{ old('email') }}"
+                autocomplete="email" required>
+        </label>
+        <button class="primary-button form-submit" type="submit">Send Reset Link</button>
+    </form>
+
+    <p class="auth-switch"><a class="text-link" href="{{ route('login') }}">Back to log in</a></p>
+@endsection
